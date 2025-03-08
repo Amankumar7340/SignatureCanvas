@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signature Canvas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Signature Canvas</h1>
+    <div class="toolbar">
+      <label for="tool">Tool:</label>
+      <select id="tool">
+        <option value="pen">Normal Pen</option>
+        <option value="fountain">Fountain Pen</option>
+        <option value="marker">Bold Marker</option>
+        <option value="eraser">Eraser</option>
+      </select>
+
+      <label for="color">Color:</label>
+      <input type="color" id="color" value="#000000">
+      <div class="color-options">
+        <div class="color-box" style="background-color: #000000;" data-color="#000000"></div>
+        <div class="color-box" style="background-color: #ff0000;" data-color="#ff0000"></div>
+        <div class="color-box" style="background-color: #00ff00;" data-color="#00ff00"></div>
+        <div class="color-box" style="background-color: #0000ff;" data-color="#0000ff"></div>
+        <div class="color-box" style="background-color: #ffff00;" data-color="#ffff00"></div>
+        <div class="color-box" style="background-color: #ff00ff;" data-color="#ff00ff"></div>
+        <div class="color-box" style="background-color: #00ffff;" data-color="#00ffff"></div>
+        <div class="color-box" style="background-color: #ffffff;" data-color="#ffffff"></div>
+      </div>
+
+      <label for="size">Size:</label>
+      <input type="number" id="size" min="1" max="50" value="5">
+      <button id="increaseEraser">+</button>
+      <button id="decreaseEraser">-</button>
+
+      <button id="clear">Clear Canvas</button>
+    </div>
+    <canvas id="signatureCanvas"></canvas>
+    <div class="download-options">
+      <label for="format">Download as:</label>
+      <select id="format">
+        <option value="jpg">JPG (With Background)</option>
+        <option value="png">PNG (With Background)</option>
+        <option value="jpg-no-bg">JPG (No Background)</option>
+        <option value="png-no-bg">PNG (No Background)</option>
+      </select>
+      <button id="download">Download</button>
+    </div>
+  </div>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCR6jxgf3kVQV1x2r5QtmAT6z55QbHeCEE",
+      authDomain: "signature-web47.firebaseapp.com",
+      projectId: "signature-web47",
+      storageBucket: "signature-web47.firebasestorage.app",
+      messagingSenderId: "65288876062",
+      appId: "1:65288876062:web:447cd0858d85bb215afe0f",
+      measurementId: "G-NXLY4977D2"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
