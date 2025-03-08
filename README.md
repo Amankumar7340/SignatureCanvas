@@ -6,10 +6,15 @@ https://signature-web47.web.app/
 
 Features
 🖊️ Multiple Tools: Choose from pen, marker, or eraser.
+
 🎨 Customizable Colors: Select from predefined colors or use a color picker.
+
 📏 Adjustable Size: Increase or decrease the tool size for precision.
+
 💾 Download Options: Save your signature as JPG, PNG, or transparent background images.
+
 📱 Responsive Design: Works seamlessly on both desktop and mobile devices.
+
 ✨ Instant Drawing: Smooth and responsive drawing experience.
 
 Tech Stack:-
